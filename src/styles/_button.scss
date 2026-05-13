@@ -1,0 +1,74 @@
+@import 'variables';
+.btnNav{
+
+    a{
+
+    border: none;
+        color: $btnAzul;
+    }
+    
+}
+button{
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    color: $btnAzul;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color .5s ease;
+    &:hover{
+        border: solid;
+        border-radius:10px ;
+        background-color: $btnHover;
+        transform: scale(1.05);
+        border: none;
+    }
+    
+    bottom & a{
+        color: $btnAzul;
+        font-size: 1em;
+    }
+
+
+    @media(max-width:767px){
+    
+    }
+}
+
+
+.home__contentfooter--button{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 400px;
+    height: 60px;
+    font-size: 1em;
+    border-radius: 15px;
+    border: 3px solid white;
+    background-color: $titlecolors;
+    color: $navtext;
+
+    &:hover{
+        background-color: yellow;
+        border-radius: 15px;
+        border: 3px solid white;
+    }
+
+    @media(max-width:767px) {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        width: 300px;
+        height: 50px;
+        font-size: 1em;
+     }
+
+     @media (min-width:1025px){
+        margin-top: 0px;
+        margin-bottom: 10px;
+        width: 300px;
+        height: 60px;
+        font-size: 1.2em;
+     }
+}
+

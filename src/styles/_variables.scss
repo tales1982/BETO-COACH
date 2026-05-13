@@ -1,0 +1,30 @@
+
+
+
+@mixin flex-col{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+@mixin bg{
+background-image: url('../images/bgHomeMobile.png');
+background-repeat:repeat;
+background-position: cover;
+width: 100vw;
+height: 100vh;
+}
+
+
+
+$titlecolors:#ffbf00;
+$navtext:#30078a;
+$colorSilver:#dddada;
+$btnHover:#77148663;
+$btnAzul:#0553c7;

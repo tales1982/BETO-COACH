@@ -1,0 +1,209 @@
+@import 'variables';
+
+.services{
+    @include bg();
+    @include flex-col();
+    align-items: center;
+    
+    &__h2{
+        margin: 90px;
+        font-size: 1.8vw;
+        color: $titlecolors;
+    }
+
+    &__h5{
+        margin: 80px;
+        font-size: 1.6vw;
+        color:$colorSilver;
+    }
+
+    &__img{
+        @include flex-row();
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        &__imgColune{
+            @include flex-col();
+            text-align: center;
+            font-size: .9vw;
+            color: white;
+        }
+        
+        &--item{
+            margin: 10px;
+            width: 350px;
+            height: 220px;
+            border: 1px solid white;
+            transition: transform 0.8s ease; 
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+@media (min-width:1024px) and (max-width:1120px){
+    .services{
+       height: auto;
+       background-repeat:repeat;
+       padding-top: 30px;
+        
+        &__h2{
+            margin: 30px 10px;
+            font-size: 1em;
+            text-align: center;
+            color: $titlecolors;
+        }
+    
+        &__h5{
+            margin-top: 30px;
+            text-align: center;
+            font-size: 1.8em;
+            color: white;
+            
+        }
+    
+        &__img{
+            display: flex;
+            flex-wrap: wrap;
+
+            
+            
+            &__imgColune{
+                font-size: 1em;
+                color: white;
+            }
+            
+            &--item{
+                margin: 15px 5px;
+                width: 300px;
+                height: 200px;
+                border: 1px solid white;
+            }
+        }
+    }
+
+}
+
+@media (min-width:768px) and (max-width:1023px){
+    .services{
+       height: auto;
+       background-repeat:repeat;
+       padding-top: 70px;
+        
+        &__h2{
+            margin: 30px 10px;
+            font-size: 1em;
+            text-align: center;
+            color: $titlecolors;
+        }
+    
+        &__h5{
+            margin-top: 30px;
+            text-align: center;
+            font-size: 1.8em;
+            color: white;
+            
+        }
+    
+        &__img{
+            display: flex;
+            flex-wrap: wrap;
+
+            
+            
+            &__imgColune{
+                font-size: 1em;
+                color: white;
+            }
+            
+            &--item{
+                margin: 15px 5px;
+                width: 300px;
+                height: 200px;
+                border: 1px solid white;
+            }
+        }
+    }
+
+    #lastDivImg{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width:424px) and (max-width:767px){
+    .services{
+       height: auto;
+       background-repeat:repeat;
+        
+        &__h2{
+            margin: 30px 10px;
+            font-size: 1em;
+            text-align: center;
+            color: $titlecolors;
+        }
+    
+        &__h5{
+            margin-top: 30px;
+            text-align: center;
+            font-size: 1.8em;
+            color: $titlecolors;
+            
+        }
+    
+        &__img{
+            @include flex-col();
+            
+            &__imgColune{
+                font-size: 1em;
+                color: white;
+            }
+            
+            &--item{
+                margin: 15px 0px;
+                width: 350px;
+                height: 220px;
+                border: 1px solid white;
+            }
+        }
+    }
+}
+
+@media (max-width:423px){
+    .services{
+       height: auto;
+       background-repeat:repeat;
+        
+        &__h2{
+            margin: 5px;
+            font-size: 1em;
+            text-align: center;
+            color: $titlecolors;
+        }
+    
+        &__h5{
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.5em;
+            color: $titlecolors;
+            
+        }
+    
+        &__img{
+            @include flex-col();
+            
+            &__imgColune{
+                font-size: 1em;
+                color: white;
+            }
+            
+            &--item{
+                margin: 5px;
+                width: 300px;
+                height: 200px;
+                border: 1px solid white;
+            }
+        }
+    }
+}

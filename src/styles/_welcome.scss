@@ -1,0 +1,130 @@
+@import 'variables';
+
+.welcome{
+    @include bg();
+    @include flex-col();
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.4em;
+    color: white;
+
+    &__presentation{
+        width: 80%;
+        h2{
+            margin: 50px 0;
+            font-size: 5vw;
+            color: $titlecolors;
+        }
+
+        p{
+            margin-top: 20px;
+        }
+    }
+
+    &__row{
+        width: 80%;
+        
+        @include flex-row();
+
+        &--text{
+            width: 70%;
+            color: #000;
+
+            &--paragr{
+                @include flex-row();
+                align-items: center;
+                justify-content: center;
+                height: 10vw;
+                background-color:$titlecolors;
+
+                p{
+                    text-align: center;
+                    font-size: 1.5vw;
+                    width: 75%;
+                }
+            }
+            
+        }
+        &--img{
+            width: 30%;
+            overflow: hidden; 
+            
+            img{
+                width: 30vw;
+            }
+        }
+
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px){
+    .welcome{
+    
+        &__row{
+
+            &--text{
+         
+                &--paragr{
+                
+                    p{
+                        font-size: .7em;
+                    }
+                }
+                
+            }
+
+        }
+    }
+}
+
+@media (max-width:767px){
+.welcome{
+height: 100%;
+padding-top: 80px;
+
+&__presentation{
+    h2{
+        font-size: 1.4em;
+        text-align: center;
+        margin: 10px
+    }
+
+    p{
+        font-size: .9em
+    }
+}
+
+.welcome__row{
+        @include flex-col();
+        justify-content: center;
+        align-items: center;
+
+
+        &--text{
+            width: 100%;
+
+            &--paragr{
+                height: 150px;
+                margin-top: 15px;
+                p{
+                    width: 98%;
+                    font-size: .8em;
+                }
+            }
+
+       
+        }
+
+        &--img{
+            width: 100%;
+            img{
+                width: 84vw;
+            }
+            
+        }
+        }
+
+
+}
+    
+}

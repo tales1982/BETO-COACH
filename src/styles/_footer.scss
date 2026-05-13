@@ -1,0 +1,517 @@
+@import'variables';
+
+
+.footer{
+    @include bg();
+    @include flex-col();
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 80px;
+    height: 100%;
+
+  
+
+    &__col{
+        @include flex-row();
+
+        &__contact{
+        @include flex-col();
+        align-items: center;
+        color: white;
+        height: 700px;
+        width: 50%;
+
+        &--h1-{
+            font-size: 4em
+        }
+
+        &--h6{
+            font-size: 2em;
+            margin-top: 30px
+        }
+
+        &--icon{
+            @include flex-row();
+
+
+            a{
+                margin: 40px 20px;
+                img{
+                    width: 50px;
+
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+           
+        }
+
+        &--adress{
+
+            h2{
+                    margin-bottom: 20px;
+                    margin-left: 70px;
+                    font-size: 2em;
+                }
+            
+                li{
+                list-style: none;
+                display: flex;
+                align-items: center;
+                margin-top:15px;
+
+                
+                
+                p{
+                    margin-left: 10px;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+                img{
+                    width: 50px;
+                    border-radius: 50%
+                }
+            }
+            
+        }
+    }
+
+    &__formulaire{
+        @include flex-col();
+        align-items: center;
+        width: 50%;
+        font-size: 3rem;
+        color: rgb(255, 255, 255);
+
+        form{
+            margin-top: 20px;
+        @include flex-col();
+        width: 60%;       
+        margin-bottom: 2rem;
+        line-height: 1.2;
+
+        input{
+            height: 50px;
+            border-radius: 10px;
+            font-size: 24px;
+
+            &:hover,:focus{
+                outline: none;
+                border-color:$titlecolors;
+                box-shadow: 0 0 0 3px $titlecolors;
+            }
+        }
+
+        textarea{
+            height: 200px;
+            border-radius: 10px;
+            font-size: 20px;
+
+            &:hover,:focus{
+                &:hover{
+                    outline: none;
+                    border-color:$titlecolors;
+                    box-shadow: 0 0 0 3px $titlecolors;
+                }
+            }
+            
+        }
+
+        button{
+            margin-top: 10px;
+            color: white;
+            width: 180px;
+            border-radius: 10px;
+            height: 60px;
+            &:hover,:focus{
+                outline: none;
+                border-color:$titlecolors;
+                box-shadow: 0 0 0 3px $titlecolors;
+                background-color: $titlecolors;
+                color: $navtext;
+            }
+        }
+
+        }
+        
+    }
+
+
+
+}
+&__footerEnd{
+    @include flex-row();
+    justify-content: center;
+    font-size: 1em;
+    color: white;
+    margin-bottom: 30px;
+    }
+
+
+}
+#textFormH1{
+    font-size: 1.2em;
+}
+
+@media (min-width:768px) and (max-width:1200px){
+    .footer{
+        height: 100vh;
+
+        &__col{
+    
+            &__contact{
+
+            height: 500px;
+            width: 50%;
+    
+            &--h1{
+                font-size: 2em
+            }
+    
+            &--h6{
+                font-size: 1em;
+                margin-top: 30px
+            }
+    
+            &--icon{
+        
+    
+    
+                a{
+                    margin: 5px 10px;
+                    img{
+                        width: 30px;
+    
+                    }
+                }
+    
+        
+            }
+    
+            &--adress{
+    
+                h2{
+                        margin-bottom: 20px;
+                        margin-left: 70px;
+                        font-size: 1.1em;
+                    }
+                
+                    li{
+                    margin-top:5px;
+    
+                    
+                    
+                    p{
+                        margin-left: 10px;
+                        font-weight: bold;
+                        font-size: 16px;
+                    }
+                    img{
+                        width: 30px;
+                    }
+                }
+                
+            }
+        }
+    
+        &__formulaire{
+            height: 500px;
+            font-size: 1.4rem;
+            color: rgb(255, 255, 255);
+    
+            form{
+                margin-top: 10px;
+            @include flex-col();
+
+    
+            input{
+                height: 40px;
+                border-radius: 10px;
+                font-size: 22px;
+            }
+    
+            textarea{
+                height: 200px;
+                border-radius: 10px;
+                font-size: 20px;
+    
+                
+            }
+    
+            button{
+                margin-top: 10px;
+                color: white;
+                width: 120px;
+                border-radius: 10px;
+                height: 40px;
+                
+            }
+    
+            }
+            
+        }
+    
+    
+    
+    }
+    &__footerEnd{
+        @include flex-row();
+        justify-content: center;
+        font-size: 1em;
+        color: white;
+        margin-bottom: 30px;
+        }
+    
+    
+    }
+}
+
+@media (min-width:424px) and (max-width:767px){
+    .footer{
+        @include flex-col();
+        align-items: center;
+        background-repeat: repeat;
+        height: 100%;
+        padding-top: 20px;
+    
+    &__col{
+        display: block;
+         &__contact{
+            height: 280px;
+            width: 100%;
+    
+            &--h1{
+                margin-top: 0;
+                font-size: 2em
+            }
+    
+            &--h6{
+                text-align: center;
+                font-size: 1.2em;
+                margin: 10px
+            }
+    
+            &--icon{
+                font-size: 1.2em;
+
+                a{
+                    margin: 5px 15px;
+                    img{
+                        width: 30px;
+    
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+    
+               
+            }
+    
+            &--adress{
+    
+                h2{
+                    display: none;
+                    }
+                    
+                 h6{
+                        font-size: 1.2em;
+                    }
+                    li{
+                    display: flex;
+                    align-items: center;
+                    margin-top:0px;
+    
+                   
+                    
+                    
+                    p{
+                        margin-left: 10px;
+                        font-weight: bold;
+                        font-size: 18px;
+                    }
+                    img{
+                        margin: 5px;
+                        width: 35px;
+                        border-radius: 50%
+                    }
+                }
+                
+            }
+        }
+    
+        &__formulaire{
+            @include flex-col();
+            align-items: center;
+            
+            width: 100%;
+            font-size: 1rem;
+            color: rgb(255, 255, 255);
+
+            h1{
+                font-size: 1.8em;
+            }
+    
+            form{
+                margin-top: 20px;
+            @include flex-col();
+            width: 90%;       
+
+    
+            input{
+                height: 50px;
+                font-size: 18px;
+    
+
+            }
+    
+            textarea{
+                font-size: 18px;
+    
+            }
+            button{
+                    
+                    width: 110px;
+                    border-radius: 10px;
+                    height: 30px;
+                }
+            }
+    
+        }
+    }
+
+    &__footerEnd{
+        font-size: .8em;
+        text-align: center;
+
+        }
+
+            
+            
+    }
+}
+
+@media (max-width:423px){
+    .footer{
+        @include flex-col();
+        background-repeat: repeat;
+        height: 100%;
+        padding-top: 20px;
+    
+    &__col{
+        display: block;
+         &__contact{
+            height: 280px;
+            width: 100%;
+    
+            &--h1{
+                margin-top: 0;
+                font-size: 2em
+            }
+    
+            &--h6{
+                text-align: center;
+                font-size: 1em;
+                margin: 10px
+            }
+    
+            &--icon{
+                font-size: 1.2em;
+
+                a{
+                    margin: 5px 15px;
+                    img{
+                        width: 30px;
+    
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+    
+               
+            }
+    
+            &--adress{
+    
+                h2{
+                    display: none;
+                    }
+                    
+                 h6{
+                        font-size: 1.2em;
+                    }
+                    li{
+                    display: flex;
+                    align-items: center;
+                    margin-top:0px;
+    
+                   
+                    
+                    
+                    p{
+                        margin-left: 10px;
+                        font-weight: bold;
+                        font-size: 18px;
+                    }
+                    img{
+                        margin: 5px;
+                        width: 35px;
+                        border-radius: 50%
+                    }
+                }
+                
+            }
+        }
+    
+        &__formulaire{
+            @include flex-col();
+            align-items: center;
+            width: 100%;
+            font-size: 1rem;
+            color: rgb(255, 255, 255);
+
+            h1{
+                font-size: 1.8em;
+            }
+    
+            form{
+                margin-top: 20px;
+            @include flex-col();
+            width: 90%;       
+
+    
+            input{
+                height: 50px;
+                font-size: 18px;
+    
+
+            }
+    
+            textarea{
+                font-size: 18px;
+    
+            }
+            button{
+                    
+                    width: 110px;
+                    border-radius: 10px;
+                    height: 30px;
+                }
+            }
+    
+        }
+    }
+
+    &__footerEnd{
+        font-size: .8em;
+        text-align: center;
+
+        }
+
+            
+            
+    }
+}

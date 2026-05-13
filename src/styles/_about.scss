@@ -1,0 +1,267 @@
+@import 'variables';
+
+.about{
+    @include bg();
+    @include flex-row();
+    justify-content: space-between;
+    align-items: center;
+    color: $colorSilver;
+    width: 100vw;
+
+    &__title{
+        font-size: 18px;
+        padding-left: 50px;
+        max-width: 1100px;
+        text-align: justify;
+
+        &--hidden{
+            display: none;
+        }
+        
+        &--name1{
+            font-size: 3em;
+            color: $titlecolors;
+            margin-top: 20px;
+        }
+
+        &--name{
+            font-size: 3em;
+            color: $titlecolors;
+            padding-bottom: 10px;
+           
+        }
+
+        h3{
+            color: $titlecolors;
+            margin-top: 20px;
+        }
+
+        p{
+            margin: 10px 0;
+        }
+
+    }
+
+    &__img{
+
+        margin: 30px 50px 20px 20px;
+        img{
+            border-radius: 50%;
+            border: 3px solid $titlecolors;
+            width: 600px;
+            height: auto;
+            padding-right: 50px;
+            background-color:$titlecolors ;
+        }
+        
+    }
+}
+
+
+/*=========================== MOBILE =================================*/
+
+
+
+
+@media (min-width:1024px)and (max-width:1200px){
+    .about{
+        @include bg();
+        @include flex-row();
+        
+        color: $colorSilver;
+        width: 100vw;
+    
+        &__title{
+            font-size: 1.2em;
+            padding : 10px;
+            max-width: 1100px;
+            text-align: justify;
+    
+            &--hidden{
+                display: none;
+            }
+            
+            &--name1{
+                font-size: 2em;
+                color: $titlecolors;
+                margin-top: 20px;
+            }
+    
+            &--name{
+                font-size: 2em;
+                color: white;
+                padding-bottom: 10px;
+                text-decoration: underline;
+            }
+    
+            h3{
+                color: $titlecolors;
+                margin-top: 20px;
+            }
+    
+            p{
+                margin: 10px 0;
+            }
+    
+        }
+    
+        &__img{
+    
+            margin: 10px;
+            img{
+                
+                width: 400px;
+              
+            }
+            
+        }
+    }
+
+}
+
+
+@media (min-width:768px) and (max-width:1023px){
+    .about{
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        background-image: url('../images/bgHomeMobile.png');
+        background-repeat:repeat;
+        padding-top: 80px;
+
+        &__img{
+            display: none;
+        }
+
+
+        &__title{
+        text-align: center;
+        padding-left: 0px;
+        width: 100%;
+
+        &--name1{
+            font-size: 1.4em
+            }
+
+            &--name{
+            font-size: 1.3em;
+            padding: 10px 0;
+            color: aliceblue
+            }
+
+
+            &--info{
+                @include flex-col();
+                justify-content: center;
+                align-items: center;
+
+                &--mobil{
+                    display: none;
+                }
+            }
+
+
+            h3{
+                width: 80%;
+            }
+        
+            p{
+            width: 80%;
+            padding: 0 5px;
+            font-size: 1.2em;
+            text-align: justify;
+            }
+            
+            &--hidden{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                img{
+                    display: flex;
+                    width: 50%;
+                    border-radius: 50%;
+                    padding-right: 30px;
+                    background-color: $titlecolors;
+            }
+
+        }
+    }
+    
+}
+}
+
+
+@media (max-width:767px) {
+  
+    .about{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        background-image: url('../images/bgHomeMobile.png');
+        background-repeat:repeat;
+
+        &__title{
+        text-align: center;
+        padding-left: 0px;
+        width: 100%;
+
+            &--name1{
+            font-size: 1.4em
+            }
+
+            &--name{
+            font-size: 1.3em;
+            padding: 10px 0;
+            color: aliceblue
+            }
+
+
+            &--info{
+                @include flex-col();
+                justify-content: center;
+                align-items: center;
+
+
+                
+                /*hide text --MOBILE--*/
+                &--mobil{
+                    display: none;
+                }
+            }
+
+
+            h3{
+                width: 80%;
+            }
+        
+            p{
+            width: 80%;
+            padding: 0 5px;
+            font-size: 1.2em;
+            text-align: start;
+            }
+            
+            &--hidden{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            img{
+                display: flex;
+                width: 80%;
+                border-radius: 50%;
+                padding-right: 30px;
+                background-color: $titlecolors;
+        }
+
+            }
+
+        }
+    
+        &__img{
+            display: none;
+        }
+    }
+    
+}
